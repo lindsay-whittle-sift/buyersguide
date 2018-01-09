@@ -1,0 +1,206 @@
+/**
+ *  Flexbox grid
+ *  Based on https://philipwalton.github.io/solved-by-flexbox/demos/grids/
+ */
+/*------------------------------------*\
+  #mixins
+\*------------------------------------*/
+
+@mixin respond-min($width) {
+  @media screen and (min-width: $width) {
+    @content;
+  }
+}
+
+/*------------------------------------*\
+  #variables
+\*------------------------------------*/
+// Breakpoints
+// units must be set in rems
+$mobileAdvert: 21.75rem; // 348px
+$mobileLandscape: 30rem; // 480px
+$tablet: 40rem; // 640px
+$tabletWide: 48rem; // 768px
+$tabletSuperWide: 56.5rem; // 904px
+$desktop: 64rem; // 1024px
+$widescreen: 71.25rem; // 1140px
+$superWidescreen: 77.5rem; // 1240px
+$xlWidescreen: 85rem; // 1360px
+
+/*------------------------------------*\
+  #flexbox grid
+\*------------------------------------*/
+
+// Initial grid Styles
+.flex-grid {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+}
+
+// Centering the cells after adding padding
+.grid--gutters {
+  margin: 0 0 0 -1rem;
+}
+
+// Adding padding between all cells
+.grid--gutters {
+  > .grid-cell {
+    padding: 0 0 2rem 1rem;
+  }
+}
+
+// Add extra margin bottom to grid / row.
+.grid--gutters-margin {
+  margin-bottom: 1.5rem;
+}
+
+// All cells will be full width by default if not specified in a grid
+.grid-cell {
+  display: flex;
+  flex: 1;
+}
+
+// Centering content
+.grid--justified-center {
+  justify-content: center;
+}
+
+// Mobile first
+// flex grid sizing is equal to these flex elements: [flex-grow] [flex-shrink] [flex-basis];
+.grid--cols-3 > .grid-cell,
+.grid--cols-4 > .grid-cell,
+.grid--cols-6 > .grid-cell,
+.grid--cols-3-and-half > .grid-cell,
+.grid-cell--is-half > .grid-cell,
+.grid-cell--is-two-third,
+.grid-cell--is-third {
+  flex: 0 0 100%; 
+}
+
+.grid--cols-3 {
+  > .grid-cell {
+    
+    @include respond-min($tablet) {
+      flex: 0 0 100%;
+    }
+    
+    @include respond-min($desktop) {
+      flex: auto;
+      width: 33.3333%;
+    }
+  }
+}
+
+.grid--cols-3-and-half {
+  > .grid-cell {
+    
+    @include respond-min($tablet) {
+      flex: 0 0 auto;
+      width: 50%;
+    }
+    
+    @include respond-min($desktop) {
+      flex: 0 0 auto;
+      width: 33.3333%;
+    }
+  }
+} 
+
+.grid--cols-4 {
+  > .grid-cell {
+    
+    @include respond-min($tablet) {
+      flex: 1 0 auto;
+      width: 50%;
+    }
+    
+    @include respond-min($desktop) {
+      flex: auto;
+      width: 25%;
+    }
+  }
+}
+
+.grid--cols-6 {
+  > .grid-cell {
+    
+    @include respond-min($mobileLandscape) {
+      flex: 0 0 auto;
+      width: 50%;
+    }
+
+    @include respond-min($tabletWide) {
+      width: 33.3333%;
+    }
+    
+    @include respond-min($desktop) {
+      flex: auto;
+    }
+    
+    @include respond-min($superWidescreen) {
+      flex-grow: 0;
+      width: 16.6666%;
+    }
+  }
+}
+
+.grid-cell--is-half {
+  > .grid-cell{
+    
+    @include respond-min($tablet) {
+      flex: 1 0 auto;
+      width: 50%;
+    }
+  }
+}
+
+.grid-cell--is-third {
+  
+  @include respond-min($tablet) {
+    flex: 1 0 auto;
+    width: 33.3333%;
+  } 
+}
+
+.grid-cell--is-two-third {
+  
+  @include respond-min($tablet) {
+    flex: 1 0 auto;
+    width: 66.6666%;
+  }
+}
+
+/* Grid cell has an Ad slot (MPU) */
+.grid-cell--advert-mpu {
+  @include respond-min($tablet) {
+    min-width: 20rem;
+  }
+}
+
+/* Alignment per row */
+.grid--top {
+  align-items: flex-start;
+}
+
+.grid--bottom {
+  align-items: flex-end;
+}
+
+.grid--center {
+  align-items: center;
+}
+
+/* Alignment per cell */
+.grid-cell--top {
+  align-self: flex-start;
+}
+
+.grid-cell--bottom {
+  align-self: flex-end;
+}
+
+.grid-cell--center {
+  align-self: center;
+}
+
