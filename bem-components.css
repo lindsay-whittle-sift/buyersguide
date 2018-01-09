@@ -1,0 +1,203 @@
+$fonts: "Lato", sans-serif;
+
+/* 
+// -------------------------------
+// Layers
+// ------------------------------- 
+*/
+.layer {
+  padding: 1rem 0.5rem;
+  border-top: 0.0625rem solid #E8E8E8;
+  display: flex;
+}
+
+.layer--clear {
+  border-top: 0;
+  padding: 0 0.5rem 0.5rem 0.5rem;
+}
+
+.layer__title {
+  font-size: 1rem;
+  flex: 1;
+  padding-top: 0;
+} 
+
+.layer__title--uppercase {
+  text-transform: uppercase;
+} 
+
+.layer__body {
+  font-size: 1rem;
+  line-height: 1.1875rem;
+  flex: 1.5;
+  color: #45474D;
+}
+
+.layer__body--narrow {
+  flex: 1;
+}
+
+.layer__body_mgbottom {
+  margin-bottom: 1rem;
+}
+
+/* 
+// -------------------------------
+// Comparison
+// ------------------------------- 
+*/
+.comparison__title-wrapper {
+  display: flex;
+  align-items: baseline;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid #DCE6EB;
+}
+
+.comparison__title {
+  font-size: 1.25rem;
+  padding-right: 1rem;
+}
+
+.comparison__title--alt {
+  font-size: 1.0625rem;
+  padding-top: 1.25rem;
+}
+
+.comparison__title--large {
+  font-size: 1.5625rem;
+}
+
+/* 
+// -------------------------------
+// Review Filter
+// ------------------------------- 
+*/
+.filter {
+  background-color: #F7F7F8;
+}
+
+.filter__header {
+  padding-top: 0.75rem;
+  text-transform: uppercase;
+  color: #9B9B9B;
+}
+
+.filter__items {
+  display: flex;
+  padding: 0.75rem 0;
+  color: #333333;
+}
+
+.filter__item {
+  padding-right: 1rem;
+}
+
+/* 
+// -------------------------------
+// Review
+// ------------------------------- 
+*/
+.review {
+  border-bottom: 0.0625rem solid #E8E8E8;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+}
+
+.reivew__size {
+  display: inline;
+  padding-right: 1rem;
+  font-size: 1.0625rem;
+  color: #0B5485;
+}
+
+.review__date {
+  font-size: 0.8125rem;
+  color: #73A2C2;
+}
+
+.reivew__body {
+  padding-top: 1rem;
+}
+
+.body__title {
+  font-size: 1.0625rem;
+  line-height: 1.3125rem;
+}
+
+.body__sub {
+  font-size: 1rem;
+  line-height: 2rem;
+  padding: 0.5rem 0;
+}
+
+/* 
+// -------------------------------
+// Review Scone: MIGHT NOT NEED/NEW DESIGN MADE
+// ------------------------------- 
+*/
+.scone {
+  border: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  font-family: $fonts;
+  height: 100%;
+  padding: 2rem 0;
+  
+  @media screen and (max-width: 40rem) {
+    flex-direction: column;
+  }
+}
+
+.image {
+  // same styles as comment avatars
+  min-width: 2.25rem;
+  border-radius: 50%;
+}
+
+.scone__media {
+  padding: 0.875rem 0.875rem 0 0;
+}
+
+.scone__title {
+  display: inline;
+  font-size: 1.25rem;
+  padding: 0 2rem 0.5rem 0
+}
+
+.scone__body {
+  font-size: 1.0625rem;
+  line-height: 2rem;
+  color: #343434;
+}
+
+.scone__icing {
+  display: flex;
+  flex: 1;
+}
+
+.scone__jam {
+  padding: 0.875rem 0;
+}
+
+.scone__jam-name {
+  font-size: 0.9375rem;
+  font-weight: bold;
+}
+
+.scone__jam-date {
+  font-size: 0.8125rem;
+  color: #333333;
+}
+
+.scone__jam-size {
+  display: inline;
+  padding-right: 1rem;
+  font-size: 1.0625rem;
+  color: #73A2C2;
+}
+
+.scone__cream {
+  padding: 0.875rem;
+  flex: 2;
+}
