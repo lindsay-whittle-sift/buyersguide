@@ -1,0 +1,378 @@
+// -------------------------------
+// Initial styles
+// -------------------------------
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
+$fonts: "Lato", sans-serif;
+$border: #dce6eb; // mist
+$bg-main: #fff;
+$color-main: #333; //dark
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $fonts;
+}
+
+h3 {
+  margin: 0;
+}
+
+h4 {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1003px;
+  margin: 1rem auto;
+}
+
+// CHECK
+.container--narrow {
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+// -------------------------------
+// Card styles from Spark
+// -------------------------------
+.card {
+  border: 0.0625rem solid $border;
+  background-color: $bg-main;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: $fonts;
+  height: 100%;
+}
+
+.card__body {
+  font-size: 1rem;
+  line-height: 1.625rem;
+}
+
+.card__title {
+  padding: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.card__info {
+  font-size: .875rem;
+  margin-bottom: .5rem;
+}
+
+.card__image {
+  width: 100%;
+  max-width: 6.875rem;
+  display: block;
+  padding: .6rem;
+
+  img {
+    max-height: 3.2rem;
+  }
+}
+
+.card__action {
+  font-size: .875rem;
+  line-height: .875rem;
+}
+
+// -------------------------------
+// New styles
+// -------------------------------
+.heading--centred {
+  text-align: center;
+  padding-bottom: 2rem;
+  padding-top: 1rem;
+  font-size: 1.5625rem;
+}
+
+.card__wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 1.25rem;
+  color: $color-main;
+}
+
+.card__wrapper--padded {
+  padding: 2rem;
+}
+
+.card__body--mini {
+  font-size: 0.8125rem;
+}
+
+.card__media {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  text-align: center;
+  min-height: 80px;
+  // javascript border
+  border-bottom: 4px solid #69b3e5;
+  border-top: 0;
+  padding: 0;
+}
+
+.card__title--header {
+  text-align: center;
+  width: 80%;
+  font-size: 1.5625rem;
+  padding-bottom: 1rem;
+  margin: 0 auto 1.5rem;
+  border-bottom: 0.125rem solid #dce6eb;
+}
+
+.card__intro {
+  font-size: 1.0625rem;
+}
+
+.card__intro--info {
+  font-size: 0.875rem;
+  padding-bottom: 1.25rem;
+}
+
+.card__info--primary {
+  margin-right: 1.875rem;
+}
+
+.card__action-wrapper {
+  padding: 1.5rem 0.5rem;
+}
+
+.card__stamp {
+  padding-right: 1rem;
+  color: #7492A5;
+}
+
+.card__tooltip {
+  color: #0E4172;
+}
+
+// -------------------------------
+// Icons and rating WHERE TO PUT THESE?
+// -------------------------------
+.default-icon {
+  font-size: 1.25rem;
+  padding-top: 0.125rem;
+  color: #000;
+}
+
+.default-icon--alt {
+  color: #0b5485;
+}
+
+.default-icon--positive {
+  color: #2ECC6B;
+}
+
+.default-icon--negative {
+  color: #EA5B25;
+}
+
+.default-icon--premium {
+  color: #F2A922;
+}
+
+.default-icon--padding-left {
+  padding-left: 1rem;
+}
+
+.default-icon--padding-right {
+  padding-right: 1rem;
+}
+
+.default-icon--large {
+  font-size: 1.5625rem;
+}
+
+.default-icon--small {
+  font-size: 1rem;
+}
+
+.default-icon--faded {
+  opacity: 0.4;
+}
+
+// CHECK
+.default-icon--premium-opacity:before {
+    background: linear-gradient(to right, rgba(245,166,35,1) 50%, rgba(241,231,103,1) 50%, rgba(251, 216, 158, 1) 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: initial; /* reset Font Awesome's display:inline-block */
+}
+
+.rating {
+  margin-bottom: 0.5rem;
+}
+
+.rating__stars {
+  display: inline;
+}
+
+.rating__score {
+  font-size: 0.875rem;
+}
+
+.rating__amount {
+  font-size: 1rem;
+  color: #262626;
+}
+
+.rating__amount--small {
+  font-size: 0.875rem;
+}
+
+.rating--spaced {
+  display: flex;
+  justify-content: space-around;
+}
+
+
+// BUTTON FILE?
+.button--lockdown {
+  text-align: center;
+  padding: 1.25rem 2rem;
+  background-color: #30D27E;
+  color: #fff;
+}
+
+.button--lockdown__icon {
+  font-size: 1.4375rem;
+  color: #fff;
+  margin: 0 0.5rem;
+}
+
+
+// -------------------------------
+// Card Layer cake
+// -------------------------------
+.card--layer-cake {
+  .card__title {
+    font-size: 1.5625rem;
+  }
+
+  .card__media {
+    padding: 0.5rem 0;
+  }
+
+  .card__action {
+    display: block;
+    text-decoration: none;
+    color: #0E4172;
+    font-size: 1.0625rem;
+  }
+  
+  .list {
+    padding: 0;
+  }
+  
+  .list__item {
+    padding: 0;
+  }
+}
+
+// -------------------------------
+// Card Layer cake cherry
+// -------------------------------
+.card--layer-cake--cherry {
+  .card__intro {
+    padding-bottom: 1rem;
+  }
+  
+  .layer__title {
+    font-weight: 700;
+    padding-bottom: 0.5rem;
+  }
+}
+
+// -------------------------------
+// Card Sponge Cake
+// -------------------------------
+.card--sponge-cake {
+  .card__title {
+    font-size: 1.5625rem;
+    padding: 1.5rem;
+    border-bottom: 0.25rem #E83972 solid; 
+  }
+}
+
+// -------------------------------
+// Card ticket
+// -------------------------------
+.card--ticket {
+    display: initial;
+  
+  .card__wrapper--padded {
+    padding: 1rem;
+  }
+  
+  .card__title {
+    font-size: 1.25rem;
+  }
+  
+  .card__body {
+    font-size: 1.0625rem;
+    line-height: 2rem;
+  }
+  
+  .layer {
+    border: 0;
+    padding: 1rem 0 0 0;
+    
+    @media screen and (max-width: 40rem) {
+      display: block;
+    }
+  }
+}
+
+// -------------------------------
+// Card biscuit
+// -------------------------------
+.card--biscuit {
+  
+  .card__wrapper {
+    padding: 1rem;
+  }
+
+  .card__body {
+    flex: 1;
+    padding-bottom: 1rem;
+    line-height: 1.3125rem;
+    font-size: 0.875rem;
+  }
+  
+  .card__image {
+    max-width: 100%;
+  }
+
+  .card__title {
+    font-size: 0.875rem;
+    font-weight: normal;
+    line-height: 1.0625rem;
+    color: #0b5485;
+  }
+
+  .card__info {
+    display: flex;
+    margin: 0.875rem 0 1.25rem 0;
+    color: #0b5485;
+  }
+
+  .card__action {
+    font-size: 1rem;
+    line-height: 1.1875rem;
+    text-decoration: none;
+    color: #134370;
+  }
+}
