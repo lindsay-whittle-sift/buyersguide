@@ -129,12 +129,16 @@ ul {
   width: 80%;
   font-size: 1.5625rem;
   padding-bottom: 1rem;
-  margin: 0 auto 1.5rem;
+  margin: 0 auto;
   border-bottom: 0.125rem solid #dce6eb;
 }
 
 .card__intro {
   font-size: 1.0625rem;
+}
+
+.intro__main {
+  margin-top: 1rem;
 }
 
 .card__intro--info {
@@ -242,7 +246,7 @@ ul {
 // BUTTON FILE?
 .button--lockdown {
   text-align: center;
-  padding: 1.25rem 2rem;
+  padding: 1.25rem 1rem;
   background-color: #30D27E;
   color: #fff;
 }
@@ -323,7 +327,7 @@ ul {
     border: 0;
     padding: 1rem 0 0 0;
     
-    @media screen and (max-width: 40rem) {
+    @media screen and (min-width: 40rem) {
       display: block;
     }
   }
