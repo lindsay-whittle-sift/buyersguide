@@ -50,6 +50,16 @@ $xlWidescreen: 85rem; // 1360px
   }
 }
 
+// NEW STYLE
+.cell-column {
+  flex-direction: column;
+}
+
+//  NEW STYLE
+.cell-gutter {
+  margin-top: 1rem;
+}
+
 // Add extra margin bottom to grid / row.
 .grid--gutters-margin {
   margin-bottom: 1.5rem;
@@ -92,6 +102,7 @@ $xlWidescreen: 85rem; // 1360px
   }
 }
 
+// NEW STYLE / TO REPLACE grid--cols-3 AFTER TESTING
 .grid--cols-3-and-half {
   > .grid-cell {
     
