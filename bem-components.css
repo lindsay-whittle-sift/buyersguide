@@ -20,6 +20,7 @@ $fonts: "Lato", sans-serif;
   font-size: 1rem;
   flex: 1;
   padding-top: 0;
+  padding-right: 1rem;
 } 
 
 .layer__title--uppercase {
@@ -74,6 +75,9 @@ $fonts: "Lato", sans-serif;
 */
 .filter {
   background-color: #F7F7F8;
+  .default-icon--padding-left {
+    padding-left: calc(1rem / 2);
+  }
 }
 
 .filter__header {
@@ -86,10 +90,6 @@ $fonts: "Lato", sans-serif;
   display: flex;
   padding: 0.75rem 0;
   color: #333333;
-}
-
-.filter__item {
-  padding-right: 1rem;
 }
 
 /* 
@@ -136,16 +136,14 @@ $fonts: "Lato", sans-serif;
 // ------------------------------- 
 */
 .scone {
-  border: 0;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  font-family: $fonts;
-  height: 100%;
-  padding: 2rem 0;
-  
-  @media screen and (max-width: 40rem) {
-    flex-direction: column;
+  @media screen and (min-width: 40rem) {
+    border: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    font-family: $fonts;
+    height: 100%;
+    padding: 2rem 0;
   }
 }
 
