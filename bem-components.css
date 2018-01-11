@@ -198,6 +198,6 @@ $fonts: "Lato", sans-serif;
 }
 
 .scone__cream {
-  padding: 0.875rem;
+  padding: 0.875rem 0;
   flex: 2;
 }
