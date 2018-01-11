@@ -74,7 +74,7 @@ $fonts: "Lato", sans-serif;
 // ------------------------------- 
 */
 .filter {
-  background-color: #F7F7F8;
+  background-color: #f1f1f1;
   .default-icon--padding-left {
     padding-left: calc(1rem / 2);
   }
