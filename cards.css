@@ -126,10 +126,8 @@ ul {
 
 .card__title--header {
   text-align: center;
-  width: 80%;
   font-size: 1.5625rem;
   padding-bottom: 1rem;
-  margin: 0 auto;
   border-bottom: 0.125rem solid #dce6eb;
 }
 
@@ -324,11 +322,12 @@ ul {
   }
   
   .layer {
+    display: block;
     border: 0;
     padding: 1rem 0 0 0;
     
     @media screen and (min-width: 40rem) {
-      display: block;
+      display: flex;
     }
   }
 }
