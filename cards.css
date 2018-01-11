@@ -29,15 +29,38 @@ ul {
   padding: 0;
 }
 
-.container {
+// CHECK
+.bg-tinted--lighter {
+  background: linear-gradient(180deg, #F9F9F9 0%, #FFFFFF 100%);
+}
+
+// CHECK
+.container--reduced {
   max-width: 1003px;
   margin: 1rem auto;
 }
 
-// CHECK
+ // CHECK
 .container--narrow {
   max-width: 920px;
   margin: 0 auto;
+}
+
+.page-padding {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.page-header--left {
+  text-align: left;
+}
+
+.page-header__title--alt {
+  margin: 4rem 0 0.5rem 0;
+}
+
+.page-header__description--alt {
+  margin: 0 0 4rem 0;
 }
 
 // -------------------------------
