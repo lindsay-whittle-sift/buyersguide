@@ -56,11 +56,13 @@ ul {
 }
 
 .page-header__title--alt {
-  margin: 4rem 0 0.5rem 0;
+  margin: 3.5rem 0 0.5rem 0;
+  font-size: 2.75rem;
 }
 
 .page-header__description--alt {
-  margin: 0 0 4rem 0;
+  margin: 0 0 3.5rem 0;
+  font-size: 1.0625rem;
 }
 
 // -------------------------------
