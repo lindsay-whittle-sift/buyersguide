@@ -201,3 +201,141 @@ $fonts: "Lato", sans-serif;
   padding: 0.875rem 0;
   flex: 2;
 }
+
+// -------------------------------
+// Locked block: TIDY WHEN LAYOUT HAS BEEN CONFIRMED
+// -------------------------------
+.locked {
+  display: flex;
+  flex-direction: column;
+  
+  @media screen and (min-width: 48rem) {
+    flex-direction: row;
+  }
+}
+
+.locked__quotes {
+  flex: 1.3;
+  padding-top: 2rem;
+  
+  @media screen and (min-width: 64rem) {
+    padding-right: 8rem;
+  }
+}
+
+.locked__quotes--version-2 {
+  flex-direction: column;
+  display: flex;
+  padding-right: 0;
+  padding-bottom: 2rem;
+  
+  @media screen and (min-width: 40rem) {
+    flex-direction: row;
+  }
+}
+
+.locked-quote__second {
+  padding-left: 0;
+  
+  @media screen and (min-width: 40rem) {
+    padding-left: 4rem;
+  }
+}
+
+.locked__quote {
+  position: relative;
+  z-index: 1;
+  font-family: Merriweather;	
+  font-size: 1.25rem;	
+  font-style: italic;	
+  line-height: 1.4375rem;	
+  text-align: center;
+}
+
+.locked__quote--version-2 {
+  flex: 1;
+}
+
+.locked__author {
+  font-family: $fonts;
+  font-style: initial;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.locked-quote__bottom {
+  margin-top: 2rem;
+}
+
+.locked-icon {
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  margin-top: -1.5rem;
+  font-size: 3rem;
+  color: #DCE6EB;
+}
+
+.locked__form {
+  flex: 1;
+  padding: 4rem 0 0 0;
+  
+  @media screen and (min-width: 48rem) {
+    padding: 0 3rem;
+  }
+}
+
+.locked__form--version-2 {
+  max-width: 100%;
+  margin: 0 auto;
+  padding-top: 4rem 0 0 0;
+  
+  @media screen and (min-width: 40rem) {
+    max-width: 400px;
+    padding-top: 4rem 0 0 0;
+  }
+}
+
+.locked__form-title {
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.locked__form-sub-title {
+  font-size: 1rem;
+}
+
+.locked__form-check {
+  font-size: 0.9375rem;
+}
+
+.locked__tcs {
+  margin-top: 1rem;
+  font-size: 0.75rem;
+  font-style: italic;
+}
+
+.button--lockdown__icon-wrapper {
+  position: relative;
+}
+
+// Finish
+.button--lockdown__icon-wrapper:hover 
+.button--lockdown__icon-absolute {
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+  outline: none;
+  cursor: pointer;
+} 
+
+.button--lockdown__icon-absolute {
+  position: absolute;
+  top: 1rem;
+  left: 0.625rem;
+  z-index: 1;
+  color: #333;
+}
+
+.locked__submit {
+  text-indent: 2rem;
+}
