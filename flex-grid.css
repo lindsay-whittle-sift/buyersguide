@@ -159,7 +159,8 @@ $xlWidescreen: 85rem; // 1360px
 .grid-cell--is-half {
   > .grid-cell{
     
-    @include respond-min($tablet) {
+    // Updated from $tablet. Test all places where .grid-cell--is-half is being used.
+    @include respond-min($tabletWide) {
       flex: 1 0 auto;
       width: 50%;
     }
