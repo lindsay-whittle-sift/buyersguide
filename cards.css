@@ -37,7 +37,7 @@ ul {
 // CHECK
 .container--reduced {
   max-width: 1003px;
-  margin: 1rem auto;
+  // margin: 1rem auto;
 }
 
  // CHECK
@@ -239,6 +239,10 @@ ul {
     display: initial; /* reset Font Awesome's display:inline-block */
 }
 
+.locked-icon {
+  
+}
+
 .rating {
   margin-bottom: 0.5rem;
 }
@@ -272,6 +276,10 @@ ul {
   padding: 1.25rem 1rem;
   background-color: #30D27E;
   color: #fff;
+}
+
+.button--lockdown-left {
+  text-align: left;
 }
 
 .button--lockdown__icon {
