@@ -274,6 +274,7 @@ ul {
 .button--lockdown {
   text-align: center;
   padding: 1.25rem 1rem;
+  font-family: $fonts;
   background-color: #30D27E;
   color: #fff;
 }
